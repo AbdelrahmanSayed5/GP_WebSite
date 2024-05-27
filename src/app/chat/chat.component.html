@@ -1,0 +1,4 @@
+<div class="chat_container" *ngFor="let chat of chats" #chatContainer>
+        <p *ngIf="chat.user" class="user_prompt">{{chat.message}}</p>
+        <p *ngIf="!chat.user" #systemResponses class="system_response">{{chat.message}}</p>
+</div>

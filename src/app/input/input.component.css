@@ -1,0 +1,56 @@
+.input_container{
+    background-color: #bebebe;
+    width: 100%;
+    border-radius: 20px;
+    height: 50px;
+    display: flex;
+    gap: 15px;
+    padding-right: 14px;
+}
+.input_field{
+    height:96%;
+    border-radius: 20px;
+    width: 90%;
+    padding-left: 30px;
+    outline:none;
+    background-color:#bebebe;
+    border:none;
+    font-size: 1.1rem;
+}
+::placeholder{
+    font-size: 1rem;
+    font-style: italic;
+}
+.icon_upload{
+margin-top: 5px;
+ width: 40px;
+ height:40px;
+ border-radius: 70px;
+ background-color: #3393917c;
+}
+.icon_upload_not_empty{
+    margin-top: 5px;
+    width: 40px;
+    height:40px;
+    border-radius: 70px;
+    background-color: #339391;
+    cursor: pointer;
+}
+.arrow-down {
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent ;
+    border-bottom: 10px solid white ;
+}
+.attachment_icon{
+    margin-top: 10px;
+    width: 30px;
+    height:30px;
+    border-radius: 70px;
+    cursor: pointer;
+    transform: rotate(-45deg);
+}
+.file_upload{
+    display: hidden;
+}
