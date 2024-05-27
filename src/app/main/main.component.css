@@ -43,4 +43,9 @@
     .container2{
         width: 100%;
     }
+    .csv_c{
+        position: fixed;
+        top: 30%;
+        left: 0%;
+    }
     }
