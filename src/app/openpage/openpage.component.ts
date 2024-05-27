@@ -13,7 +13,7 @@ export class OpenpageComponent implements OnInit {
   ngOnInit(): void {
     setTimeout(() => {
       this.loading=false;
-    }, 1500);
+    }, 3000);
   }
   handleopenmainpage(){
     this.route.navigate(['/main']);
