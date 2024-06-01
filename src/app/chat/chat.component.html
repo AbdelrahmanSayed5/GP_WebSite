@@ -1,4 +1,8 @@
-<div class="chat_container" *ngFor="let chat of chats" #chatContainer>
+<div class="chat_container" *ngFor="let chat of chats">
         <p *ngIf="chat.user" class="user_prompt">{{chat.message}}</p>
-        <p *ngIf="!chat.user" #systemResponses class="system_response">{{chat.message}}</p>
-</div>
+        <!-- Adjust conditional to check isLoading flag on each message -->
+        <p *ngIf="!chat.user && !chat.isLoading" class="system_response" #systemResponses>{{chat.message}}</p>
+        <p *ngIf="!chat.user && chat.isLoading" class="skeleton-30 animate-pulse"></p>
+        <p *ngIf="!chat.user && chat.isLoading" class="skeleton-50 animate-pulse"></p>
+        <p *ngIf="!chat.user && chat.isLoading" class="skeleton-100 animate-pulse"></p>
+      </div>
