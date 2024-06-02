@@ -32,7 +32,7 @@ export class ChatComponent implements OnInit,OnChanges,AfterViewInit  {
           if(this.instanceofchat.message===`Please design a function calculateTotal to compute the total of two given numbers, x and y.`){
             this.chats[newIndex] = { message: `function calculateTotal(x, y) \n{\n   return x + y;\n}`, user: false, isLoading: false };
           }
-          else if(this.instanceofchat.message===`Write tests to verify the accuracy of the function 'multiplyMatrices' for multiplying two matrices. assert the result of multiplying a 2x2 matrix with a 2x3 matrix.`)
+          else if(this.instanceofchat.message===`Write tests to verify the accuracy of the function 'multiplyMatrices' for multiplying two matrices.`)
             {
               this.chats[newIndex] = { message: `const assert = require('assert');\nconst { multiplyMatrices } = require('./your-module-name');\ntest('test',()=>{\n  let result = multiplyMatrices([[1, 2], [3, 4]], [[1, 2, 3], [4, 5, 6]]);\n  assert.deepStrictEqual(result, [[9, 12, 15], [19, 26, 33]], 'Matrix multiplication failed');\n});`, user: false, isLoading: false };
             }
