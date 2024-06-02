@@ -1,4 +1,5 @@
 
+
 .chat_container {
     width: 50%;
     color: #CCCCCC;
@@ -14,12 +15,15 @@
     background-color: #4a4a4a;
     margin-top: 25px;
     padding: 10px 10px;
-    width: 50%;
+    width: 65%;
     word-wrap: break-word;
     color:#CCCCCC;
- font-size: 1.3rem;
+ font-size: 1.4rem;
  animation-duration: 200ms;
  position: relative;
+ white-space: break-spaces;
+ font-family: Calibri, sans-serif;
+ font-weight: 300;
 }
 .user_prompt{
     border-radius: 20px;
@@ -31,12 +35,14 @@
     margin-bottom: 0px;
     padding: 10px 10px; 
     background-color:#317e7d;
-    width: 50%;
-   margin-left: 50%;
+    width: 65%;
+   margin-left: 35%;
     word-wrap: break-word;
     color:#cccccc;
- font-size: 1.3rem;
+ font-size: 1.4rem;
  position: relative;  
+ font-family: Calibri, sans-serif;
+  font-weight: 300;
 }
 @media (max-width: 880px){
 

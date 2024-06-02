@@ -29,34 +29,20 @@ export class ChatComponent implements OnInit,OnChanges,AfterViewInit  {
         let newIndex = this.chats.length; // Position where system response will appear
         this.chats.push({ message: "Loading...", user: false, isLoading: true }); // Placeholder for loading
         setTimeout(() => {
-          if(this.instanceofchat.message===`Write a function that takes a string as input and returns the number of unique words in the string. The function should ignore punctuation and be case-insensitive. For example, the input string "Hello, hello! How are you?" should return 4 (unique words: "hello", "how", "are", "you").`){
-            this.chats[newIndex] = { message: `import string 
-
-            def count_unique_words(input_string):
-                # Remove punctuation
-                translator = str.maketrans('', '', string.punctuation)
-                cleaned_string = input_string.translate(translator)
-                
-                # Convert to lower case and split into words
-                words = cleaned_string.lower().split()
-                
-                # Use a set to store unique words
-                unique_words = set(words)
-                
-                # Return the number of unique words
-                return len(unique_words)
-            
-            # Example usage
-            input_string = "Hello, hello! How are you?"
-            print(count_unique_words(input_string))`, user: false, isLoading: false };
+          if(this.instanceofchat.message===`Please design a function calculateTotal to compute the total of two given numbers, x and y.`){
+            this.chats[newIndex] = { message: `function calculateTotal(x, y) \n{\n   return x + y;\n}`, user: false, isLoading: false };
           }
+          else if(this.instanceofchat.message===`Write tests to verify the accuracy of the function 'multiplyMatrices' for multiplying two matrices. assert the result of multiplying a 2x2 matrix with a 2x3 matrix.`)
+            {
+              this.chats[newIndex] = { message: `const assert = require('assert');\nconst { multiplyMatrices } = require('./your-module-name');\ntest('test',()=>{\n  let result = multiplyMatrices([[1, 2], [3, 4]], [[1, 2, 3], [4, 5, 6]]);\n  assert.deepStrictEqual(result, [[9, 12, 15], [19, 26, 33]], 'Matrix multiplication failed');\n});`, user: false, isLoading: false };
+            }
           else{
-            this.chats[newIndex] = { message: "this is my response", user: false, isLoading: false };
+            this.chats[newIndex] = { message: "Sorry, I don't understand your requirment. Please try again", user: false, isLoading: false };
           }
           // Update with actual message
           this.isTypewriterApplied = false;
           this.applyTypewriterEffect();
-        }, 1000);
+        }, 3000);
       }
       this.scrollToBottom();
     }
