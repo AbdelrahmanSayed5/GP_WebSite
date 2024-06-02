@@ -20,6 +20,7 @@ export class InputComponent implements OnInit {
     if (event.key === 'Enter') {
       this.emitInputUser();
       this.Input_user=""
+      this.File_uploaded=false;
     }
   }
 
@@ -30,6 +31,7 @@ export class InputComponent implements OnInit {
     if(this.Input_user!==''){
       this.emitInputUser();
       this.Input_user=""
+      this.File_uploaded=false;
     }
   }
   handleselectfile(event:any){

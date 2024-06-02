@@ -42,7 +42,7 @@ export class ChatComponent implements OnInit,OnChanges,AfterViewInit  {
           // Update with actual message
           this.isTypewriterApplied = false;
           this.applyTypewriterEffect();
-        }, 3000);
+        }, 5000);
       }
       this.scrollToBottom();
     }

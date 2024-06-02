@@ -227,6 +227,7 @@
 .heading_container p {
   margin-top: 10px;
   margin-bottom: 0;
+  width: 80%;
   
 }
 
@@ -336,7 +337,7 @@ a:focus {
 
 .slider_section .detail-box h1 {
   font-size: 3rem;
-  font-weight: bold;
+  font-weight: 400;
   text-transform: uppercase;
   margin-bottom: 15px;
   color: #ffffff;
@@ -344,7 +345,7 @@ a:focus {
 
 .slider_section .detail-box p {
   color: #fefefe;
-  font-size: 14px;
+  font-size: 17px;
 }
 
 .slider_section .detail-box .btn-box {
@@ -657,3 +658,4 @@ a:focus {
 .team_section .team_container .box .social_box a:hover {
   color: #00bbf0;
 }
+
