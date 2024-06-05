@@ -1,14 +1,5 @@
-<div class="input_container">
-  <textarea #inputfield placeholder="Ask DRACODA"  [(ngModel)]="Input_user" class="input_field" (keydown.enter)="onEnterKeyPress($event)" aria-expanded="true"  (input)="adjustHeight()"></textarea>
-
-  
-  <!-- <input
-    #inputfield
-    class="input_field"
-    [(ngModel)]="Input_user"
-    placeholder="Ask DRACODA..."
-    (keydown.enter)="onEnterKeyPress($event)"
-  /> -->
+<div  [ngClass]="{input_container:!this.ourservic.loading_response,disabledcontainerinput:this.ourservic.loading_response}">
+  <textarea #inputfield placeholder="Ask DRACODA"  [(ngModel)]="Input_user"  [ngClass]="{input_field:!this.ourservic.loading_response,disabledinput:this.ourservic.loading_response}" (keydown.enter)="onEnterKeyPress($event)" aria-expanded="true"  (input)="adjustHeight()" [disabled]="this.ourservic.loading_response"></textarea>
   <label for="file-upload" class="fileuploadcontainer">
     <div
       class="attachment_icon"
@@ -29,6 +20,7 @@
     id="file-upload"
     style="display: none"
     (change)="handleselectfile($event)"
+   
   />
   <div
 

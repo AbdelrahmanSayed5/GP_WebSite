@@ -8,6 +8,7 @@ import { ChatComponent } from './chat/chat.component';
 import { MainComponent } from './main/main.component';
 import { OpenpageComponent } from './openpage/openpage.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,7 @@ import { NavbarComponent } from './navbar/navbar.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule, HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

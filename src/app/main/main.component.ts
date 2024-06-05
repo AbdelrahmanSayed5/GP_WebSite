@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { SendPromptService } from 'src/shared_Services/send-prompt.service';
+import { ChatComponent } from '../chat/chat.component';
 
 @Component({
   selector: 'app-main',
@@ -8,24 +10,26 @@ import { Component, OnInit } from '@angular/core';
 export class MainComponent implements OnInit {
   title = 'DERCODA';
   input_entered:string="";
-  input_to_chat:{message:string,user:boolean}={message:"Welcome to DRACODA,your personal JavaScript assistant! Whether you need to generate code snippets or testing functions, I'm here to help you streamling your development process. Just tell me your requirements, and let's dive into the world of efficient coding together!",user:false}
-  
-
-  constructor() { }
+  loading_response:boolean=false;
+  @ViewChild('scrollContainer') private scrollContainer!: ElementRef;
+  // @ViewChild('chatComponent', { static: true }) chatComponent!: ChatComponent;
+  constructor(private ourservic:SendPromptService) {
+   }
 
   ngOnInit(): void {
   }
-  input_user(userInput:string){
-    
-    if(userInput==="The file uploaded successfully how can I help you! FROMSYSTEM"){
-      this.input_entered="The file uploaded successfully how can I help you!"
-      this.input_to_chat={message:this.input_entered,user:false}
+  handleScroll(event: any): void {
+    if (event.key === 'Enter') {
+      event.preventDefault(); // Prevents the default action of the enter key
+      this.scrollToBottom();
     }
-    else{
-      this.input_entered=userInput
-      this.input_to_chat={message:this.input_entered,user:true}
+  }
+  private scrollToBottom(): void {
+    console.log(this.scrollContainer.nativeElement.last)
+    const scrollEl = this.scrollContainer.nativeElement;
+    if (scrollEl.scrollHeight > scrollEl.clientHeight) {
+      // Only scrolls if the content is larger than the container
+      scrollEl.scrollTop = scrollEl.scrollHeight;
     }
-
-  };
-
+  }
 }

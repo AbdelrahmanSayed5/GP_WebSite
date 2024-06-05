@@ -1,4 +1,4 @@
-
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Open+Sans:wght@300;400;600;700&display=swap");
 ::selection{
   background-color: #339392;;
   color: white;
@@ -26,11 +26,12 @@
     width: 95%;
     word-wrap: break-word;
     color:#CCCCCC;
- font-size: 1.4rem;
+ font-size: 1.2rem;
  animation-duration: 200ms;
  white-space: break-spaces;
- font-family: Calibri, sans-serif;
+ font-family: "Poppins", sans-serif;
  font-weight: 300;
+ transition: all 0.5s ease-in-out;
 }
 .iconcopycontainer{
   width: 5%;
@@ -40,6 +41,7 @@
   z-index: 1;
   cursor: pointer;
   fill:#818181;
+ 
 }
 .iconcopycontainer:hover{
   fill:#317e7d;
@@ -50,7 +52,6 @@
 }
 .user_prompt{
     border-radius: 20px;
-   
     border: none;
     background-color: #317e7d;
     margin-top: 25px;
@@ -62,11 +63,11 @@
    margin-left: 35%;
     word-wrap: break-word;
     color:#cccccc;
- font-size: 1.4rem;
+ font-size: 1.2rem;
  position: relative;  
- font-family: Calibri, sans-serif;
+ font-family: "Poppins", sans-serif;
   font-weight: 300;
-  transition: all 3s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 @media (max-width: 880px){
 
@@ -74,25 +75,7 @@
         width: 80%;
     }
     }
-    @media (max-width: 454px){
-
-        .chat_container{
-            width: 100%;
-        }
-        .system_response_container{
-            width: 98%;
-            margin:auto;
-            margin-top:20px;
-            margin-bottom:20px;
-          }
-        .user_prompt{
-            width: 98%;
-            margin:auto;
-            margin-top:20px ;
-            margin-bottom: 20px;
-
-            }
-    }
+   
     @keyframes skeleton-loading {
         0% {
           background-position: -200px 0;
@@ -100,6 +83,10 @@
         100% {
           background-position: calc(100px + 100%) 0;
         }
+      }
+      .skeleton_container{
+        width: 50%;
+        margin:auto;
       }
       .skeleton-30{
         animation: skeleton-loading 1.5s infinite linear;
@@ -134,3 +121,28 @@
       .animate-pulse{
         animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
       }
+      @media (max-width: 454px){
+
+        .chat_container{
+            width: 100%;
+        }
+        .system_response_container{
+            width: 98%;
+            margin:auto;
+            margin-top:20px;
+            margin-bottom:20px;
+          }
+        .user_prompt{
+            width: 98%;
+            margin:auto;
+            margin-top:20px ;
+            margin-bottom: 20px;
+
+            }
+            .skeleton_container{
+              width: 98%;
+              margin:auto;
+
+            
+          }
+    }

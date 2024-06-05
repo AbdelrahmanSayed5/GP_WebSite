@@ -1,4 +1,5 @@
 import { Component, ElementRef, EventEmitter, OnInit, Output, ViewChild } from '@angular/core';
+import { SendPromptService } from 'src/shared_Services/send-prompt.service';
 @Component({
   selector: 'app-input',
   templateUrl: './input.component.html',
@@ -8,39 +9,44 @@ export class InputComponent implements OnInit {
   Input_user:string="";
   File_input:any;
   File_uploaded:boolean=false;
-  @Output() Input_user_out=new EventEmitter<string>();
+  File_uploaded_input!:File;
   @ViewChild('inputfield') inputField!: ElementRef;
 
-  constructor() { }
+  constructor(protected ourservic:SendPromptService ) { }
 
   ngOnInit(): void {
   }
   onEnterKeyPress(event: any) {
-    if (event.key === 'Enter') {
       event.preventDefault();
-      console.log("Enter key pressed");
-      console.log(this.Input_user);
-      this.emitInputUser();
+      this.upload_user_input();
+  }
+  upload_user_input(){
+    if(this.Input_user!=='' && this.File_uploaded){
+      this.ourservic.chats.push({message:this.Input_user,user:true})
+      const formData = new FormData();
+      formData.append('prompt',this.Input_user);
+      formData.append('file',this.File_input);
+      this.ourservic.loading_response=true;
+      // send the request to the backend
+      this.ourservic.sendprompt(formData).subscribe((response)=>{
+        this.ourservic.chats.push({message:response.message,user:false})
+        this.ourservic.chats=[...this.ourservic.chats];
+        this.ourservic.loading_response=false;
+      },
+      (error)=>{
+        this.ourservic.chats.push({message:"Server is Down now try again later",user:false})
+        this.ourservic.loading_response=false;  
+      })
+      // reset the input field
       this.Input_user=""
       this.File_uploaded=false;
       const textarea = this.inputField.nativeElement;
       textarea.style.height = '50px'; // Reset the height
     }
   }
-  emitInputUser() {
-    this.Input_user_out.emit(this.Input_user);
-  }
-  upload_user_input(){
-    if(this.Input_user!==''){
-      this.emitInputUser();
-      this.Input_user=""
-      this.File_uploaded=false;
-    }
-  }
   handleselectfile(event:any){
     this.File_input=event.target.files[0];
     this.File_uploaded=true;
-    // this.Input_user_out.emit("The file uploaded successfully how can I help you! FROMSYSTEM")
   }
   adjustHeight() {
     const textarea = this.inputField.nativeElement;

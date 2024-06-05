@@ -11,6 +11,16 @@
     
    
 }
+.disabledcontainerinput{
+    background-color:#8a898933;
+    width: 100%;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center; 
+    gap: 15px;
+    padding-right: 14px;
+    margin-bottom: 5px;
+}
 .input_field{
     border-radius: 20px;
     width: 90%;
@@ -19,7 +29,7 @@
     padding-top:13px;
     
     outline:none;
-    background-color:#2f2f2f;
+    background-color:#2f2f2f85;
     border:none;
     overflow-y: hidden;
     font-size: 1rem;
@@ -32,6 +42,22 @@
     overflow-y: hidden;
     align-self: center;
     line-height: 1.6;
+}
+.disabledinput{
+    border-radius: 20px;
+    width: 90%;
+    height: 50px;
+    padding-left: 30px;
+    padding-top:13px;
+    outline:none;
+    background-color: transparent;
+    border:none;
+    overflow-y: hidden;
+    font-size: 1rem;
+    caret-color:#20807e;;
+    resize:none;
+   
+    
 }
 .expanding{
     height:auto;

@@ -1,3 +1,4 @@
+
 <svg class="csv_c" width="400" height="400" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <rect width="400" height="400" fill="url(#pattern0_2_21)" fill-opacity="0.3"/>
     <defs>
@@ -10,10 +11,33 @@
 
 
 <div class="main_container">
-  <div class="container1">
-    <app-chat [instanceofchat]="input_to_chat" class="Chat_field"></app-chat>
+  <app-navbar></app-navbar>
+  <div class="container1" #scrollContainer>
+    <app-chat  class="Chat_field"></app-chat>
   </div>
   <div class="container2">
-    <app-input (Input_user_out)="input_user($event)" class="input_field"></app-input>
+    <app-input  class="input_field" (keydown.enter)="handleScroll($event)"></app-input>
   </div>
 </div>
+<div *ngIf="false" class="always-open-offcanvas" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offcanvasExampleLabel">Offcanvas</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+    <div>
+      Some text as placeholder. In real life you can have the elements you have chosen. Like, text, images, lists, etc.
+    </div>
+    <div class="dropdown mt-3">
+      <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+        Dropdown button
+      </button>
+      <ul class="dropdown-menu">
+        <li><a class="dropdown-item" href="#">Action</a></li>
+        <li><a class="dropdown-item" href="#">Another action</a></li>
+        <li><a class="dropdown-item" href="#">Something else here</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
