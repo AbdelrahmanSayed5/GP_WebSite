@@ -1,5 +1,9 @@
 
+::selection{
+  background-color: #339392;;
+  color: white;
 
+}
 .chat_container {
     width: 50%;
     color: #CCCCCC;
@@ -7,31 +11,50 @@
     margin-bottom: 15px;
     margin: auto;
 }
+.system_response_container{
+  display:flex;
+  width: 65%;
+  border-radius: 20px;
+  border:none;  
+  margin-top: 25px;
+  margin-bottom:15px;
+  padding: 10px 10px;
+  background-color: #4a4a4a;
+  position: relative;
+}
 .system_response{
-    border-radius: 20px;
-    border-color:#CCCCCC ;
-    border-width:1px;  
-    border-style:solid;
-    background-color: #4a4a4a;
-    margin-top: 25px;
-    padding: 10px 10px;
-    width: 65%;
+    width: 95%;
     word-wrap: break-word;
     color:#CCCCCC;
  font-size: 1.4rem;
  animation-duration: 200ms;
- position: relative;
  white-space: break-spaces;
  font-family: Calibri, sans-serif;
  font-weight: 300;
 }
+.iconcopycontainer{
+  width: 5%;
+  position: absolute;
+  right: 7px;
+  top: 2px;
+  z-index: 1;
+  cursor: pointer;
+  fill:#818181;
+}
+.iconcopycontainer:hover{
+  fill:#317e7d;
+}
+.iconcopycontainer img{
+  width:85%;
+  
+}
 .user_prompt{
     border-radius: 20px;
-    border-color:#CCCCCC ;
-    border-width:1px;  
-    border-style:solid;
+   
+    border: none;
     background-color: #317e7d;
     margin-top: 25px;
+    margin-bottom: 15px;
     margin-bottom: 0px;
     padding: 10px 10px; 
     background-color:#317e7d;
@@ -43,6 +66,7 @@
  position: relative;  
  font-family: Calibri, sans-serif;
   font-weight: 300;
+  transition: all 3s ease-in-out;
 }
 @media (max-width: 880px){
 
@@ -55,11 +79,19 @@
         .chat_container{
             width: 100%;
         }
-        .system_response{
-            width: 100%;}
+        .system_response_container{
+            width: 98%;
+            margin:auto;
+            margin-top:20px;
+            margin-bottom:20px;
+          }
         .user_prompt{
-            width: 100%;
-            margin-left: 0%;}
+            width: 98%;
+            margin:auto;
+            margin-top:20px ;
+            margin-bottom: 20px;
+
+            }
     }
     @keyframes skeleton-loading {
         0% {
@@ -71,19 +103,18 @@
       }
       .skeleton-30{
         animation: skeleton-loading 1.5s infinite linear;
-        
+        margin-top: 30px;
         background-size: 800px 104px;
         background-color:#4a4a4a;
-        height: 30px;
+        height: 20px;
         width: 20%;
         border-radius: 20px;
       }
       .skeleton-50 {
         animation: skeleton-loading 1.5s infinite linear;
-        
         background-size: 800px 104px;
         background-color: #4a4a4a;
-        height: 30px;
+        height: 20px;
         width: 50%;
         border-radius: 20px;
       }
@@ -91,7 +122,7 @@
         animation: skeleton-loading 1.5s infinite linear;
         background-size: 800px 104px;
         background-color:#4a4a4a;
-        height: 30px;
+        height: 20px;
         width: 70%;
         border-radius: 20px;
       }

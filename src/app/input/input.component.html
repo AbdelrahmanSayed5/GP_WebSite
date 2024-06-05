@@ -1,12 +1,15 @@
 <div class="input_container">
-  <input
+  <textarea #inputfield placeholder="Ask DRACODA"  [(ngModel)]="Input_user" class="input_field" (keydown.enter)="onEnterKeyPress($event)" aria-expanded="true"  (input)="adjustHeight()"></textarea>
+
+  
+  <!-- <input
     #inputfield
     class="input_field"
     [(ngModel)]="Input_user"
     placeholder="Ask DRACODA..."
     (keydown.enter)="onEnterKeyPress($event)"
-  />
-  <label for="file-upload">
+  /> -->
+  <label for="file-upload" class="fileuploadcontainer">
     <div
       class="attachment_icon"
       [ngClass]="{
@@ -46,4 +49,6 @@
       />
     </svg>
   </div>
+  
 </div>
+<p class="footer">Powered by DRACODA</p>

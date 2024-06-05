@@ -91,4 +91,12 @@ export class ChatComponent implements OnInit,OnChanges,AfterViewInit  {
       }
     },100);
   }
+  handlecopycode(index:number){
+    console.log(`${this.chats[index].message}`)
+    navigator.clipboard.writeText(this.chats[index].message).then(() => {
+      console.log('Index copied to clipboard');
+    }).catch((error) => {
+      console.error('Error copying index to clipboard: ', error);
+    });
+  }
 }
