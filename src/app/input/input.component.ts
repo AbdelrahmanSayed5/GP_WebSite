@@ -22,19 +22,19 @@ export class InputComponent implements OnInit {
   }
   upload_user_input(){
     if(this.Input_user!=='' && this.File_uploaded){
-      this.ourservic.chats.push({message:this.Input_user,user:true})
+      this.ourservic.chats[this.ourservic.currentchat].push({message:this.Input_user,user:true})
       const formData = new FormData();
       formData.append('prompt',this.Input_user);
       formData.append('file',this.File_input);
       this.ourservic.loading_response=true;
       // send the request to the backend
       this.ourservic.sendprompt(formData).subscribe((response)=>{
-        this.ourservic.chats.push({message:response.message,user:false})
+        this.ourservic.chats[this.ourservic.currentchat].push({message:response.message,user:false})
         this.ourservic.chats=[...this.ourservic.chats];
         this.ourservic.loading_response=false;
       },
       (error)=>{
-        this.ourservic.chats.push({message:"Server is Down now try again later",user:false})
+        this.ourservic.chats[this.ourservic.currentchat].push({message:"Server is Down now try again later",user:false})
         this.ourservic.loading_response=false;  
       })
       // reset the input field

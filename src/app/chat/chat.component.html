@@ -1,4 +1,4 @@
-<div class="chat_container" #chatcontainer *ngFor="let chat of this.services.chats;  let i=index; let last=last">
+<div class="chat_container" #chatcontainer *ngFor="let chat of this.services.chats[this.services.currentchat]  let i=index; let last=last">
         <p *ngIf="chat.user" class="user_prompt">{{chat.message}}</p>
         <div *ngIf="!chat.user" class="system_response_container">
           <div class="system_response" #systemResponse>

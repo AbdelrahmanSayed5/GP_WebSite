@@ -10,6 +10,7 @@ import { OpenpageComponent } from './openpage/openpage.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { HttpClientModule } from '@angular/common/http';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,6 +24,7 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserModule,
     AppRoutingModule,
     FormsModule, HttpClientModule,
+  
   ],
   providers: [],
   bootstrap: [AppComponent]

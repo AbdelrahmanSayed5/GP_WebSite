@@ -6,13 +6,14 @@ import { environment } from 'src/environments/environment';
 })
 export class SendPromptService {
   response:string="";
-  chats:{message:string,user:boolean}[]=[]
+  chats:{message:string,user:boolean}[][]=[[]]
+  currentchat:number=0;
   baseUrl:string="http://localhost:3000"
   loading_response:boolean=false;
   formData:FormData=new FormData();
 
   constructor(private http:HttpClient) { 
-    this.chats.push({message:"Welcome to DRACODA,your personal JavaScript assistant! Whether you need to generate code snippets or testing functions, I'm here to help you streamling your development process. Just tell me your requirements, and let's dive into the world of efficient coding together!",user:false})
+    this.chats[this.currentchat].push({message:"Welcome to DRACODA,your personal JavaScript assistant! Whether you need to generate code snippets or testing functions, I'm here to help you streamling your development process. Just tell me your requirements, and let's dive into the world of efficient coding together!",user:false})
   }
   sendprompt(formData:FormData){
     // const headers = new HttpHeaders({

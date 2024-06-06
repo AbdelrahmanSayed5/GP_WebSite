@@ -40,8 +40,8 @@ export class ChatComponent implements AfterViewInit  {
     typeWriter();
   }
   handlecopycode(index:number){
-    console.log(`${this.services.chats[index].message}`)
-    navigator.clipboard.writeText(this.services.chats[index].message).then(() => {
+    console.log(`${this.services.chats[this.services.currentchat][index].message}`)
+    navigator.clipboard.writeText(this.services.chats[this.services.currentchat][index].message).then(() => {
       console.log('Index copied to clipboard');
     }).catch((error) => {
       console.error('Error copying index to clipboard: ', error);

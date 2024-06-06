@@ -9,35 +9,43 @@
     </defs>
     </svg>
 
+<div class="full_container">
+  <div [ngClass]="{fullopenmodal:statusmodal,halfopenmodal:!statusmodal}">
+    <div *ngIf="statusmodal">
+      <div class="header">
+        <button type="button" class="btn-close"  (click)="handlestatusmodal()"></button>
+      </div>
+        <!-- app.component.html -->
+       <!-- app.component.html -->
+   <!-- app.component.html -->
+    <!-- app.component.html -->
+<!-- app.component.html -->
+<div class="button-container" 
+     (mouseenter)="showText = true" 
+     (mouseleave)="showText = false">
+    <div class="plus-icon" *ngIf="!showText">+</div>
+    <div class="hover-text" *ngIf="showText" (click)="handlecreatenewchat()">Create new chat</div>
+</div>
 
-<div class="main_container">
-  <app-navbar></app-navbar>
-  <div class="container1" #scrollContainer>
-    <app-chat  class="Chat_field"></app-chat>
-  </div>
-  <div class="container2">
-    <app-input  class="input_field" (keydown.enter)="handleScroll($event)"></app-input>
-  </div>
-</div>
-<div *ngIf="false" class="always-open-offcanvas" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
-  <div class="offcanvas-header">
-    <h5 class="offcanvas-title" id="offcanvasExampleLabel">Offcanvas</h5>
-    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-  </div>
-  <div class="offcanvas-body">
-    <div>
-      Some text as placeholder. In real life you can have the elements you have chosen. Like, text, images, lists, etc.
+
+
+
     </div>
-    <div class="dropdown mt-3">
-      <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
-        Dropdown button
-      </button>
-      <ul class="dropdown-menu">
-        <li><a class="dropdown-item" href="#">Action</a></li>
-        <li><a class="dropdown-item" href="#">Another action</a></li>
-        <li><a class="dropdown-item" href="#">Something else here</a></li>
-      </ul>
+    <div *ngIf="!statusmodal" class="togglebuttton" (click)="handlestatusmodal()">
+      <a aria-label="More"  tabindex="0" ><span><svg viewBox="0 0 24 24" width="24" height="24" fill="white"><path d="M3.25 2.75a1.25 1.25 0 1 0 0 2.5h17.5a1.25 1.25 0 1 0 0-2.5H3.25zM2 12c0-.69.56-1.25 1.25-1.25h17.5a1.25 1.25 0 1 1 0 2.5H3.25C2.56 13.25 2 12.69 2 12zm0 8c0-.69.56-1.25 1.25-1.25h17.5a1.25 1.25 0 1 1 0 2.5H3.25C2.56 21.25 2 20.69 2 20z"></path></svg><!--$--><span></span><!--/$--></span><div role="none"style="border-radius: 8px; inset: 4px 0px;"></div></a>
     </div>
   </div>
+  <div class="main_container">
+    <app-navbar></app-navbar>
+    <div class="container1" #scrollContainer>
+      <app-chat  class="Chat_field"></app-chat>
+    </div>
+    <div class="container2">
+      <app-input  class="input_field" (keydown.enter)="handleScroll($event)"></app-input>
+    </div>
+  </div>
+  
 </div>
+
+
 
