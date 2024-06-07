@@ -147,6 +147,30 @@
 }
 
 
+.listchatcontaienr{
+    background-color: #2b48484b;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.466);
+    display: flex;
+    height:40px;
+    font-size: 1.1rem;
+    justify-content:center;
+    align-items: center;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+.chatheader{
+    background-color:red;
+    width: fit-content;
+    margin: auto;
+    
+}
+.selectedchat{
+    background-color: #2b4848;
+
+
+}
+
+
 
 .container2{
     width: 50%;

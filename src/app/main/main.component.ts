@@ -15,7 +15,7 @@ export class MainComponent implements OnInit {
   showText: boolean = false;
   @ViewChild('scrollContainer') private scrollContainer!: ElementRef;
   // @ViewChild('chatComponent', { static: true }) chatComponent!: ChatComponent;
-  constructor(private ourservic:SendPromptService) {
+  constructor(protected ourservic:SendPromptService) {
    }
 
   ngOnInit(): void {
@@ -38,6 +38,13 @@ export class MainComponent implements OnInit {
     this.statusmodal=!this.statusmodal;
   }
   handlecreatenewchat(){
+    this.ourservic.chats.push([]);
+    this.ourservic.currentchat=this.ourservic.chats.length-1;
     this.ourservic.chats[this.ourservic.currentchat]=[{message:"Welcome to DRACODA,your personal JavaScript assistant! Whether you need to generate code snippets or testing functions, I'm here to help you streamling your development process. Just tell me your requirements, and let's dive into the world of efficient coding together!",user:false}]
+  }
+  openchosedchat(i:number)
+  {
+    this.ourservic.currentchat=i;
+
   }
 }

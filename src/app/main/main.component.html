@@ -26,6 +26,9 @@
     <div class="plus-icon" *ngIf="!showText">+</div>
     <div class="hover-text" *ngIf="showText" (click)="handlecreatenewchat()">Create new chat</div>
 </div>
+<div *ngFor="let chat of this.ourservic.chats; let i=index" class="listchatcontaienr" (click)="openchosedchat(i)" [ngClass]="{selectedchat:i==this.ourservic.currentchat}">
+ {{"Chat"+" "+(i+1)}}
+</div>
 
 
 
