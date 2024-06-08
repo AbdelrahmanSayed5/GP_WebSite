@@ -13,7 +13,7 @@ export class MainComponent implements OnInit {
   loading_response:boolean=false;
   statusmodal:boolean=true;
   showText: boolean = false;
-  loading:boolean=true;
+ 
 
   @ViewChild('scrollContainer') private scrollContainer!: ElementRef;
   // @ViewChild('chatComponent', { static: true }) chatComponent!: ChatComponent;
@@ -21,9 +21,7 @@ export class MainComponent implements OnInit {
    }
 
   ngOnInit(): void {
-    setTimeout(() => {
-      this.loading=false;
-    }, 3000);
+   
   }
   handleScroll(event: any): void {
     if (event.key === 'Enter') {
