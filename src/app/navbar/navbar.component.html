@@ -19,12 +19,18 @@
                 <span>A</span>
             </div>
         </div>
-        <ul>
-            <li><a>HOME</a></li>
-            <li><a>ABOUT</a></li>
-            <li><a>FEATURES</a></li>
-            <li><a>TEAM</a></li>
+        <ul class="navfirst">
+            <li (click)="openmainpage()"><a>HOME</a></li>
+            <li (click)="aboutpage()"><a>ABOUT</a></li>
+            <li (click)="openfeatures()"><a>FEATURES</a></li>
+            <li (click)="teampage()"><a>TEAM</a></li>
+           
+
             
+        </ul>
+        <ul class="logingsignuo">
+            <li (click)="handleopenlogin()"><a>Log in</a></li>
+            <li (click)="handlelopensignup()"><a>Sign up</a></li>
         </ul>
     </nav>
 

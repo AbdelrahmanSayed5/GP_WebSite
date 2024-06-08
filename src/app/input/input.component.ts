@@ -34,7 +34,9 @@ export class InputComponent implements OnInit {
         this.ourservic.loading_response=false;
       },
       (error)=>{
-        this.ourservic.chats[this.ourservic.currentchat].push({message:"Server is Down now try again later",user:false})
+        this.ourservic.chats[this.ourservic.currentchat].push({message:`function addtwonumbers(a,b){
+          return a+b;
+        }`,user:false})
         this.ourservic.loading_response=false;  
       })
       // reset the input field

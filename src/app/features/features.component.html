@@ -1,0 +1,66 @@
+<div class="loadercontainer" *ngIf="loading">
+    <div class="loader">
+        <span>D</span>
+        <span>R</span>
+        <span>A</span>
+        <span>C</span>
+        <span>O</span>
+        <span>D</span>
+        <span>A</span>
+    </div>
+</div>
+<app-navbar></app-navbar>
+<section class="service_section layout_padding">
+    <div class="service_container">
+      <div class="container ">
+        <div class="heading_container heading_center">
+          <h2 style="color:rgba(255, 255, 255, 0.582)">
+            Our <span>Features</span>
+          </h2>
+          <p>
+            Discover what Dracoda can do for you with its helpful tools and features, designed to make coding in JavaScript easier and your projects more reliable
+          </p>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="box ">
+              <div class="img-box">
+                <img src="../../assets/images/unit-testing.svg" alt="">
+              </div>
+              <div class="detail-box">
+                <h5>
+                  Generate unit testing code
+                </h5>
+                <p>
+                  Dracoda creates a program that automatically writes testing code in JavaScript using Jest. This testing code helps ensure that your JavaScript code works correctly by running small tests to check individual parts, like functions or modules. It not only saves time and effort but also enhances the reliability and stability of JavaScript applications.
+
+
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="box ">
+              <div class="img-box">
+                <img src="../../assets/images/brackets-curly.svg" alt="">
+              </div>
+              <div class="detail-box">
+                <h5>
+                  Generate javascript code
+                </h5>
+                <p>
+                  Dracoda writes JavaScript functions for you. This tool will save you time and effort by automatically generating the code you need. You just tell it what you want the function to do, and it crafts the JavaScript code accordingly. It's like having a personal assistant for coding tasks specially boilerplate code, making your job easier and faster.
+
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div (click)="handleopenmainpage()" class="btn-box">
+          <a>
+            Lets Try It 
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>

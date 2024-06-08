@@ -1,0 +1,232 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Open+Sans:wght@300;400;600;700&display=swap");
+
+.loadercontainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+   
+}
+.loader{
+    -webkit-perspective:700px ;
+    perspective: 700px;
+}
+.loader>span{
+    font-size: 8rem;
+    font-family: "Poppins", sans-serif;
+    display: inline-block;
+    animation: flip 2.6s infinite linear;
+    transform-origin: 0 70%;
+    transform-style:preserve-3d ;
+    -webkit-transform-style:preserve-3d ;
+}
+@keyframes flip{
+    35%{
+        transform: rotateX(360deg);
+    }
+    100%{
+        transform: rotateX(360deg);
+    }
+    100%{
+        transform: rotateY(360deg);
+    }
+}
+.loader>span:nth-child(even){
+    color:   #339391fa;
+}
+.loader>span:nth-child(odd){
+    color: rgba(255, 255, 255, 0.5);
+}
+.loader>span:nth-child(2){
+    animation-delay: 0.3s;
+}
+.loader>span:nth-child(3){
+    animation-delay: 0.6s;
+}
+.loader>span:nth-child(4){
+    animation-delay: 0.9s;
+}
+.loader>span:nth-child(5){
+    animation-delay: 1.2s;
+}
+.loader>span:nth-child(6){
+    animation-delay: 1.5s;
+}
+.loader>span:nth-child(7){
+    animation-delay: 1.8s;
+}
+.page_container{
+    margin-top: 50px;
+
+}
+@media (max-width: 670px) {
+    .loader>span {
+        font-size: 4rem;
+    }
+}
+.col{
+    color:white;
+}
+@media (max-width: 1300px) {}
+
+@media (max-width: 1120px) {}
+
+
+
+
+.layout_padding {
+  padding: 90px 0;
+}
+
+.layout_padding2 {
+  padding: 75px 0;
+}
+
+.layout_padding2-top {
+  padding-top: 75px;
+}
+
+.layout_padding2-bottom {
+  padding-bottom: 75px;
+}
+
+.layout_padding-top {
+  padding-top: 90px;
+}
+
+.layout_padding-bottom {
+  padding-bottom: 90px;
+}
+
+.heading_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.heading_container h2 {
+  position: relative;
+  font-weight: bold;
+  margin-bottom: 0;
+}
+
+.heading_container h2 span {
+  color: #339391fa;
+}
+
+.heading_container p {
+  margin-top: 10px;
+  margin-bottom: 0;
+  width: 80%;
+  
+}
+
+.heading_container.heading_center {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  color:white
+}
+
+a,
+a:hover,
+a:focus {
+  text-decoration: none;
+}
+
+a:hover,
+a:focus {
+  color: initial;
+}
+
+.btn,
+.btn:focus {
+  outline: none !important;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+
+/*team section */
+.team_section {
+  text-align: center;
+  background-color: #00204a;
+  color: #ffffff;
+  margin-top: 200px;
+}
+
+.team_section .heading_container {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.team_section .team_container {
+  padding: 0 15px;
+}
+
+.team_section .team_container .box {
+  padding: 35px 0 0 0;
+  border-radius: 5px;
+  overflow: hidden;
+  -webkit-transition: all .1s;
+  transition: all .1s;
+  margin-top: 45px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#002759), to(#002b64));
+  background: linear-gradient(to bottom, #002759, #002b64);
+}
+
+.team_section .team_container .box .img-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.team_section .team_container .box .img-box img {
+  width: 120px;
+  border-radius: 100%;
+  border: 5px solid #ffffff;
+}
+
+.team_section .team_container .box .detail-box {
+  margin: 25px 0;
+}
+
+.team_section .team_container .box .detail-box h5 {
+  color: #00bbf0;
+  font-weight: 600;
+  position: relative;
+}
+
+.team_section .team_container .box .social_box {
+  padding: 10px 45px 20px 45px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.team_section .team_container .box .social_box a {
+  color: #ffffff;
+  font-size: 22px;
+}
+.team_section .team_container .box .social_box a:hover {
+  color: #00bbf0;
+}
+

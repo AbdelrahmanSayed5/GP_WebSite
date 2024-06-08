@@ -546,6 +546,10 @@ a:focus {
 .about_section {
   
   color: #ffffff;
+
+  margin-top: 20PX;
+
+
 }
 
 .about_section .heading_container {
