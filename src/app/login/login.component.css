@@ -93,7 +93,6 @@
     display: flex;
     justify-content: flex-start;
     justify-items: center;
-    width: 20%;
     font-size: 1.1rem;
     width: 92%;
     margin: auto;
@@ -128,7 +127,7 @@ display: flex;
 width: 92%;
 margin: auto;
 padding-left: 2%;
-margin-top: 50px;
+margin-top: 40px;
 justify-content: space-around;
 align-items: flex-start;
 }
@@ -156,12 +155,12 @@ align-items: flex-start;
     justify-content: flex-end;
     justify-items: center;
     margin-top: 30px;
+    padding-right: 2%;
 }
 .truebuttons_container{
     display:flex;
-    width: 25%;
+    gap:5%;
     white-space: nowrap;
-    justify-content: space-between;
 }
 .existing_text{
     align-self: center;
@@ -172,15 +171,12 @@ align-items: flex-start;
 .existing_text:hover{
     cursor:pointer;
     color:#339391a9;
-    
 }
-
-    .errormessage {
-        margin-bottom: 5px;
-        border-radius: 20px;
-        background-color: #f8d7da; /* Light red background color */
-        color: #721c24; /* Dark red text color */
-        padding: 10px;
-        font-size: 1rem;
-      }
-    
+.errormessage {
+    margin-bottom: 5px;
+    border-radius: 20px;
+    background-color: #f8d7da; /* Light red background color */
+    color: #721c24; /* Dark red text color */
+    padding: 10px;
+    font-size: 1rem;
+}
