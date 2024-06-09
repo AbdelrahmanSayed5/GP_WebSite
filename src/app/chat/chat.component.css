@@ -36,8 +36,8 @@
 .iconcopycontainer{
   width: 5%;
   position: absolute;
-  right: 7px;
-  top: 2px;
+  right: 2%;
+  top: 2%;
   z-index: 1;
   cursor: pointer;
   fill:#818181;
